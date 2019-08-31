@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        js global module test
+    </title>
+
+    <script src="./dist/entry1.js"></script>
+    <script src="./dist/entry2.js"></script>
+    <script>
+        function update1() {
+            document.getElementById("input1").value = increment1().toString();
+        }
+
+        function update2() {
+            document.getElementById("input2").value = increment2().toString();
+        }
+    </script>
+</head>
+
+<body>
+    <p><a href="#useWindow">Use window as global</a></p>
+    <p><a href="#">Use module const as global</a></p>
+
+    <p>
+        <input disabled id="input1" type="text" />
+        <button onclick="update1()">Increment 1</button>
+    </p>
+
+    <p>
+        <input disabled id="input2" type="text" />
+        <button onclick="update2()">Increment 2</button>
+    </p>
+</body>
+
+</html>
